@@ -1,11 +1,13 @@
 # Prerequisites
 *.d
+.config
 
 # Compiled Object files
 *.slo
 *.lo
 *.o
 *.obj
+*.pyc
 
 # Precompiled Headers
 *.gch
@@ -30,3 +32,22 @@
 *.exe
 *.out
 *.app
+
+# gtags
+GTAGS
+GRTAGS
+GPATH
+
+# emacs
+.dir-locals.el
+
+# emacs temp file suffixes
+*~
+.#*
+\#*#
+
+# eclipse setting
+.settings
+
+# MacOS directory files
+.DS_Store
