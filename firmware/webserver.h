@@ -5,7 +5,7 @@
 /*                                                     Email   : goldcard99@hotmail.com       */
 /*                                                     Address : DF, BRAZIL, 70670-403        */
 /*        Created: 2021/04/07 10:25:33 by rFeijo                                              */
-/*        Updated: 2022/01/04 16:11:13 by rFeijo                         All rights reserved  */
+/*        Updated: 2022/01/05 20:10:59 by rFeijo                         All rights reserved  */
 /**********************************************************************************************/
 
 // Diretivas de configuração do 'Header'

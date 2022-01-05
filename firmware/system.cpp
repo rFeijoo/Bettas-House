@@ -5,7 +5,7 @@
 /*                                                     Email   : goldcard99@hotmail.com       */
 /*                                                     Address : DF, BRAZIL, 70670-403        */
 /*        Created: 2020/08/02 22:28:24 by rFeijo                                              */
-/*        Updated: 2022/01/04 16:11:13 by rFeijo                                              */
+/*        Updated: 2022/01/05 20:10:59 by rFeijo                                              */
 /*                                                                       All rights reserved  */
 /**********************************************************************************************/
 
@@ -972,19 +972,19 @@ void bettas_house_system_t::reboot_switch_routine(void) {
  * @param state Valor a ser escrito no objeto.
  */
 void bettas_house_system_t::set_analog_output(bettas_house_analog_outputs_t *ptr, int value) {
-  if (analogRead(ptr->ch) == value)
+  int new_output;
+
+  if (ptr->pull_up_enable)
+    new_output = ANALOG_GPIO_MAX_OUTPUT - value;
+  else
+    new_output = value;
+
+  if (new_output == analogRead(ptr->ch))
     return;
-  
-  if (ptr->pull_up_enable) {
-    ptr->output = ANALOG_GPIO_MAX_OUTPUT - value;
+  else
+    ptr->output = new_output;
     
-    analogWrite(ptr->ch, ptr->output);
-  }
-  else {
-    ptr->output = value;
-    
-    analogWrite(ptr->ch, ptr->output);
-  }
+  analogWrite(ptr->ch, ptr->output);
   
   serial_print("GPIO - " + ptr->tag + F(" output: ") + String(ptr->output), 2);
 }

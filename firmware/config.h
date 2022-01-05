@@ -5,7 +5,7 @@
 /*                                                     Email   : goldcard99@hotmail.com       */
 /*                                                     Address : DF, BRAZIL, 70670-403        */
 /*        Created: 2020/08/02 22:28:24 by rFeijo                                              */
-/*        Updated: 2022/01/04 16:11:13 by rFeijo                                              */
+/*        Updated: 2022/01/05 20:10:59 by rFeijo                                              */
 /*                                                                       All rights reserved  */
 /**********************************************************************************************/
 
@@ -19,9 +19,6 @@
 #define SYSTEM_MODEL          "Null"
 #define SYSTEM_MANUFACTURER   "@rFeijoo"
 #define SYSTEM_VERSION        "1.0.0"
-#define SYSTEM_PASSWORD       "216-00-611"
-#define SYSTEM_ADMIN_USER     "Admin"
-#define SYSTEM_ADMIN_PASSWORD "password"
 
 /**
  * Diretivas de configuração do modo DEBUG
@@ -32,7 +29,7 @@
  */
 #define SYSTEM_DEBUG_MODE_ON
 #ifdef SYSTEM_DEBUG_MODE_ON
-  #define DBG_SYSTEM_LEVEL  3
+  #define DBG_SYSTEM_LEVEL  1
 #endif /*SYSTEM_DEBUG_MODE_ON*/
 
 /**
@@ -43,8 +40,8 @@
 /**
  * Diretivas de configaração das saídas PWM.
  */
-#define ANALOG_GPIO_MIN_OUTPUT  0.00
-#define ANALOG_GPIO_MAX_OUTPUT  1023.00
+#define ANALOG_GPIO_MIN_OUTPUT  0
+#define ANALOG_GPIO_MAX_OUTPUT  255
 
 /**
  * Diretivas de configuração do Timer 0

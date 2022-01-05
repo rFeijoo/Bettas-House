@@ -5,7 +5,7 @@
 /*                                                     Email   : goldcard99@hotmail.com       */
 /*                                                     Address : DF, BRAZIL, 70670-403        */
 /*        Created: 2020/08/02 22:28:24 by rFeijo                                              */
-/*        Updated: 2022/01/04 16:11:13 by rFeijo                         All rights reserved  */
+/*        Updated: 2022/01/05 20:10:59 by rFeijo                         All rights reserved  */
 /**********************************************************************************************/
 
 #include <Arduino.h>
@@ -14,7 +14,8 @@
 #include <ESP8266WebServer.h>
 #include "webserver.h"
 #include "config.h"
-#include "gpios.h"
+#include "structs.h"
+#include "password.h"
 
 #ifndef _SYSTEM_H_
   #define _SYSTEM_H_

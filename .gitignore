@@ -51,3 +51,6 @@ GPATH
 
 # MacOS directory files
 .DS_Store
+
+# Secret files
+password.h
